@@ -1,5 +1,9 @@
+import { Button } from "@components/Atoms"
+
 export const HomeScreen = () => {
   return (
-    <div>HomeScreen</div>
+    <div>
+      <Button />
+    </div>
   )
 }
