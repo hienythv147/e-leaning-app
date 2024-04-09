@@ -22,8 +22,8 @@
 
     "baseUrl": "./",
     "paths": {
-      "@assets": ["./src/assets/index.ts"],
-      "@components/*": ["./src/components/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@components": ["./src/components/index.ts"],
       "@config/*": ["./src/config/*"],
       "@hooks": ["./src/hooks/index.ts"],
       "@pages": ["./src/pages/index.ts"],
