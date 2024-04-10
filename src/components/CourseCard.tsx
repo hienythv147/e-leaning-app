@@ -2,6 +2,7 @@ import { IconComment, IconEye, IconLike, IconUsers } from "@assets/icons";
 import { convertNumberOfInteraction, formatPrice } from "@utils";
 
 interface CourseCardProps {
+  className?: string;
   banner: string;
   title: string;
   newPrice?: number;
@@ -18,6 +19,7 @@ interface CourseCardProps {
 }
 
 export const CourseCard = ({
+  className,
   banner,
   title,
   newPrice = 0,
@@ -35,22 +37,22 @@ export const CourseCard = ({
   const isNewPrice = newPrice > 0 && newPrice !== oldPrice;
   return (
     <div
-      className="max-w-sm rounded-lg overflow-hidden shadow-lg"
+      className={`max-w-sm rounded-lg overflow-hidden shadow-lg cursor-pointer ${className}`}
       onClick={onClick}
     >
       <img src={banner} alt="" className="w-full bg-gray-300" />
       <div className="px-4 py-3">
-        <div className="font-medium text-black text-lg mb-2 line-clamp-2">
+        <div className="font-medium text-black text-lg mb-2 line-clamp-1">
           {title}
         </div>
-        {type === "COURSE_PRO" && (newPrice > 0 || oldPrice > 0) && (
+        {type === "COURSE_PRO" && (
           <div className="flex flex-row items-center">
             <span
               className={`text-black text-base ${
                 isNewPrice ? "line-through" : ""
               }`}
             >
-              {formatPrice(oldPrice)}
+              {oldPrice === 0 ? "" : formatPrice(oldPrice)}
             </span>
             {isNewPrice && (
               <span className="text-price text-base ml-3">{formatPrice(newPrice)}</span>
