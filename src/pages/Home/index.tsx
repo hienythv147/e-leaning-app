@@ -9,7 +9,7 @@ import { CarouselSlider } from "./components";
 
 export const HomeScreen = () => {
   return (
-    <>
+    <div className="pt-5">
       <CarouselSlider />
       <div className="flex items-center justify-center py-10">
         <div className="w-10/12">
@@ -102,6 +102,6 @@ export const HomeScreen = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };

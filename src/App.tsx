@@ -7,10 +7,10 @@ export default function App() {
     <Router>
       <Header />
       <div className="flex flex-row">
-        <div className="flex w-1/6 bg-slate-400">
+        <div className="flex w-1/12">
           <SideBarLeft />
         </div>
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col w-full px-8">
           <Routes />
         </div>
       </div>
